@@ -38,8 +38,8 @@ resource "azurerm_application_gateway" "network" {
     request_timeout       = 60
      /*connection_draining {
         enabled = true
-        drain_timeout_sec = 200 */
-    }
+        drain_timeout_sec = 200
+    } */
   }
 
   http_listener {
