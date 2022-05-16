@@ -1,5 +1,5 @@
-resource "azurerm_monitor_action_group" "ag" {
-  name                = "${var.env}-${var.monitor_group_name}" #"myactiongroup"  
+/*resource "azurerm_monitor_action_group" "ag" {
+  name                = "${var.env}-${var.monitor_group_name}" #"myactiongroup"
   resource_group_name = azurerm_resource_group.resource-group.name
   short_name          = "${var.env}-${var.monitor_group_short_name}"
   tags = var.tags
@@ -12,8 +12,8 @@ resource "azurerm_monitor_metric_alert" "alert" {
   description         = "${var.env}-monitoring alert"
   target_resource_type = "Microsoft.Compute/virtualMachines"
   target_resource_location = var.location
-  
-  criteria { 
+
+  criteria {
     metric_namespace = "Microsoft.Compute/virtualMachines"
     metric_name      = "Percentage CPU"
     aggregation      = "Total"

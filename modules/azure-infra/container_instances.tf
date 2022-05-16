@@ -29,3 +29,8 @@ resource "azurerm_container_group" "Container_instances" {
     "env" = "${var.env}"
   }
 }
+########### Added
+data "azurerm_container_group" "mycon" {
+  name                = azurerm_container_group.Container_instances.name
+  resource_group_name = azurerm_resource_group.rg1.name
+}

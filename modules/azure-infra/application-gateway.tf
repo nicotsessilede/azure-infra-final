@@ -26,6 +26,7 @@ resource "azurerm_application_gateway" "network" {
 
   backend_address_pool {
     name = local.backend_address_pool_name
+      ip_addresses = [data.azurerm_container_group.mycon.ip_address]
   }
 
   backend_http_settings {
@@ -54,6 +55,7 @@ resource "azurerm_application_gateway" "network" {
     http_listener_name         = local.listener_name
     backend_address_pool_name  = local.backend_address_pool_name
     backend_http_settings_name = local.http_setting_name
+    priority                    = 1
   }
     tags = {
       "env" = "${var.env}"
@@ -64,5 +66,6 @@ resource "azurerm_public_ip" "pip" {
   name                = "${var.env}-pip"
   resource_group_name = azurerm_resource_group.resource-group.name
   location            = azurerm_resource_group.resource-group.location
-  allocation_method   = "Dynamic"
+  allocation_method   = "Static"
+  sku                 = "Standard"
 }
