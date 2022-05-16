@@ -15,7 +15,7 @@ resource "azurerm_monitor_metric_alert" "alert" {
 
   criteria {
     metric_namespace = "Microsoft.Compute/virtualMachines"
-    metric_name      = "Percentage CPU"
+    metric_name      = "Percentage CPU"s
     aggregation      = "Total"
     operator         = "GreaterThan"
     threshold        = 80
@@ -26,3 +26,4 @@ resource "azurerm_monitor_metric_alert" "alert" {
   }
   tags = var.tags
 }
+*/
