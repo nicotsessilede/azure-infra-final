@@ -32,13 +32,13 @@ resource "azurerm_application_gateway" "network" {
   backend_http_settings {
     name                  = local.http_setting_name
     cookie_based_affinity = "Disabled"
-    path                  = "/path1/"
+    #path                  = "/path1/"
     port                  = 80
     protocol              = "Http"
     request_timeout       = 60
-    connection_draining {
+     /*connection_draining {
         enabled = true
-        drain_timeout_sec = 200
+        drain_timeout_sec = 200 */
     }
   }
 
