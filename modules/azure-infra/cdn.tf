@@ -1,4 +1,4 @@
-resource "azurerm_storage_account" "storeacc" {
+/*resource "azurerm_storage_account" "storeacc" {
   name                      = var.storage_account_name
   resource_group_name       = local.resource_group_name
   location                  = local.location
@@ -80,4 +80,4 @@ resource "null_resource" "add_custom_domain" {
       STATIC_CDN_PROFILE = var.cdn_profile_name
     }
   }
-}
+}*/
