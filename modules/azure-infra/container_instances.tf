@@ -3,7 +3,7 @@ resource "azurerm_container_group" "Container_instances" {
   location            = azurerm_resource_group.resource-group.location
   resource_group_name = azurerm_resource_group.resource-group.name
   ip_address_type     = "public"
-  dns_name_label      = "${var.env}-aci-label"
+  dns_name_label      = "${var.env}-aci-label1"
   os_type             = "Linux"
 
   container {
@@ -13,7 +13,7 @@ resource "azurerm_container_group" "Container_instances" {
     memory = "1.5"
 
     ports {
-      port     = 443
+      port     = 80
       protocol = "TCP"
     }
   }
