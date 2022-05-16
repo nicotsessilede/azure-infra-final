@@ -5,13 +5,13 @@ terraform {
       version = "~>2.0"
     }
   }
-  backend "azurerm" {
+/*  backend "azurerm" {
     resource_group_name  = "cloud-shell-storage-westeurope"
     storage_account_name = "csb10032001f9f70371"
     container_name       = "${var.env}-hello-world"
     key                  = "dev.terraform.tfstate"
   }
-}
+}*/
 
 
 provider "azurerm" {
