@@ -10,8 +10,8 @@ terraform {
     storage_account_name = "csb10032001f9f70371"
     container_name       = "${var.env}-hello-world"
     key                  = "dev.terraform.tfstate"
-  }
-}*/
+  }*/
+}
 
 
 provider "azurerm" {
