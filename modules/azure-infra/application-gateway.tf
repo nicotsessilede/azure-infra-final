@@ -4,7 +4,7 @@ resource "azurerm_application_gateway" "network" {
   location            = azurerm_resource_group.resource-group.location
 
   sku {
-    name     = "Standard_Small"
+    name     = "Standard_v2"
     tier     = "Standard"
     capacity = 2
   }
