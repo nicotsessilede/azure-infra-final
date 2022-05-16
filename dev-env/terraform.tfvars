@@ -21,7 +21,7 @@ azurerm_lb_probe_name              = "ssh-running-probe"
 network_profile_name               = "terraformnetworkprofile"
 
 
-storage_account_name               = "devstorageacccc"
+storage_account_name               = "devstorageaccc"
 account_kind                       = "StorageV2"
 sku                                = "Standard_GRS"
 access_tier                        = "Hot"
